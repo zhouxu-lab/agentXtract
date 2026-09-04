@@ -1,0 +1,80 @@
+# ── Local research (analysis, paper, figures, benchmarks) ─
+_research/
+
+# ── Publication and source-document artifacts (never commit) ───────────────
+*.pdf
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.ppt
+*.pptx
+*.7z
+*.gz
+*.tar
+*.zip
+*.db
+*.duckdb
+*.sqlite
+*.sqlite3
+*.parquet
+*.tif
+*.tiff
+dielectric_properties.csv
+paper_coverage.csv
+paper_coverage_summary.json
+run_provenance.json
+manifest.json
+
+# ── Secrets & environment ────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ── Python ───────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+*.egg-info/
+dist/
+build/
+
+# ── Pipeline intermediates (regenerable) ─────────────────
+data/parsed/
+data/extracted/
+data/validated/
+data/database/
+data/pipeline.db
+data/checkpoint.db
+data/**
+!data/
+!data/README.md
+*.log
+
+# ── Private annotations and project-specific extensions ─
+annotations/
+reference_data/
+gold_standard/
+local_extensions/
+configs/*.local.yaml
+
+# ── PDF corpus (source documents are local only) ─────────
+data/corpus/
+
+# ── Node / npm (not needed for pipeline) ─────────────────
+node_modules/
+package.json
+package-lock.json
+
+# ── IDE / OS ─────────────────────────────────────────────
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ── Claude Code ──────────────────────────────────────────
+.claude/

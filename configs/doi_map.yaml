@@ -1,0 +1,5 @@
+# Optional DOI overrides for local source files or parser corrections.
+# Add project-specific mappings locally. For example:
+# "local/my source filename": "10.xxxx/example-doi"
+# "truncated-or-incorrect-doi": "10.xxxx/correct-doi"
+{}

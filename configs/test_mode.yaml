@@ -1,0 +1,13 @@
+input_dir: "data/corpus"
+output_dir: "data"
+
+skip_stages:
+  - "discover"
+  - "pre-triage"
+  - "download"
+
+use_batch_api: true  # 50% cost savings; results within 24h (often minutes)
+batch_timeout_seconds: 86400  # fail explicitly instead of polling forever
+default_concurrency: 5
+log_level: "DEBUG"
+track_costs: true

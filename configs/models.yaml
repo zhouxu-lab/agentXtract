@@ -1,0 +1,78 @@
+screener:
+  model: "claude-haiku-4-5-20251001"
+  max_tokens: 1024
+  temperature: 0.0
+
+text_extractor:
+  model: "claude-sonnet-4-6"
+  max_tokens: 4096
+  temperature: 0.0
+
+table_extractor:
+  model: "claude-haiku-4-5-20251001"
+  max_tokens: 8192
+  temperature: 0.0
+
+# Equation and coefficient tables require stronger symbolic and spatial
+# reasoning than ordinary rectangular data tables.
+equation_extractor:
+  model: "claude-sonnet-4-6"
+  max_tokens: 8192
+  temperature: 0.0
+
+# Vision fallback for tables that Docling parses badly (multi-level headers,
+# merged cells). The page is rendered at 3x and re-read from the image.
+# Must be a vision-capable model on a provider whose wrapper forwards images.
+vision_fallback:
+  enabled: true
+  model: "claude-sonnet-4-6"
+  max_tokens: 8192
+  temperature: 0.0
+  coverage_threshold: 0.5   # retry when text extraction covers < 50% of rows
+
+validator:
+  provider: "openai"
+  model: "gpt-4.1-mini"
+  max_tokens: 4096
+  temperature: 0.0
+
+# Applied only by the Anthropic/OpenAI batch wrappers implemented in src/utils.py.
+batch_discount: 0.5
+
+# Standard realtime API list prices in USD per million tokens, verified
+# 2026-09-04. Provider prices are time-sensitive and should be refreshed before
+# publishing cost comparisons.
+pricing:
+  claude-haiku-4-5-20251001:
+    input_per_mtok: 1.00
+    output_per_mtok: 5.00
+  claude-sonnet-4-6:
+    input_per_mtok: 3.00
+    output_per_mtok: 15.00
+  claude-opus-4-6:
+    input_per_mtok: 5.00
+    output_per_mtok: 25.00
+  gpt-4.1-mini:
+    input_per_mtok: 0.40
+    output_per_mtok: 1.60
+  gpt-4.1:
+    input_per_mtok: 2.00
+    output_per_mtok: 8.00
+  gpt-5-mini:
+    input_per_mtok: 0.25
+    output_per_mtok: 2.00
+  gpt-5.4:
+    input_per_mtok: 2.50
+    output_per_mtok: 15.00
+  gemini-2.5-flash:
+    input_per_mtok: 0.30
+    output_per_mtok: 2.50
+  gemini-2.5-pro:
+    input_per_mtok: 1.25
+    output_per_mtok: 10.00
+  gemini-3-flash-preview:
+    input_per_mtok: 0.50
+    output_per_mtok: 3.00
+  gemini-3.1-pro-preview:
+    input_per_mtok: 2.00
+    output_per_mtok: 12.00

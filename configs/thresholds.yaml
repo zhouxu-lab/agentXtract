@@ -1,0 +1,33 @@
+screener:
+  min_records_for_high_priority: 5
+  min_records_for_medium_priority: 1
+
+validation:
+  frequency_range_mhz: [1.0, 100000.0]
+  temperature_range_c: [-80.0, 200.0]
+  dielectric_constant_range: [1.0, 200.0]
+  loss_factor_range: [0.001, 200.0]
+  moisture_range_pct: [0.0, 100.0]
+  max_loss_tangent: 10.0
+  # RF frequencies (<=100 MHz): ionic conduction causes high loss factor values
+  rf_frequency_threshold_mhz: 100.0
+  rf_loss_factor_range: [0.001, 5000.0]
+  rf_dielectric_constant_range: [1.0, 300.0]
+
+deduplication:
+  frequency_tolerance_pct: 1.0
+  temperature_tolerance_c: 0.5
+  dielectric_tolerance_pct: 2.0
+
+evaluation:
+  match_frequency_tolerance_mhz: 10.0
+  match_temperature_tolerance_c: 1.0
+
+audit:
+  water_upper_bound_2450: 87.0     # pure water ε' at 2450 MHz, 0°C
+  water_upper_bound_915: 88.0      # pure water ε' at 915 MHz, 0°C
+  microwave_freq_threshold_mhz: 100.0  # RF vs microwave boundary
+  divergence_pct: 20.0             # max acceptable spread for duplicate conditions
+  zscore_threshold: 3.0            # outlier detection threshold
+  high_moisture_threshold_pct: 50.0  # above this, water dominates dielectric behavior
+  max_loss_tangent_microwave: 10.0   # tan δ above this at microwave is unusual

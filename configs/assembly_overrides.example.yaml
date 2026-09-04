@@ -1,0 +1,19 @@
+# Synthetic examples only. Copy this file to a name ending in `.local.yaml`
+# and point `assembly.overrides_file` at that local copy.
+
+doi_overrides:
+  "synthetic:old-id": "synthetic:canonical-id"
+
+material_aliases:
+  "sample powder, untreated": "Untreated sample powder"
+
+row_rules:
+  - where:
+      paper_uid: "000000000000"
+      source_table: "Table A"
+    set:
+      source_location: "Table A, verified row"
+
+  - where:
+      paper_uid: "ffffffffffff"
+    drop: true
