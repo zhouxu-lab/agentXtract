@@ -217,6 +217,14 @@ for a run. Use only source documents that you are authorized to process, and
 review each provider's current data-retention and privacy terms before working
 with confidential, unpublished, or access-restricted material.
 
+## Citation
+
+If you use agentXtract in your research, please cite:
+
+> Zhou, X., Zhang, Y., Sablani, S. S., Wang, S., & Tang, J. (2026). Agentic AI for food property data: From literature to database to new discovery. *Journal of Food Engineering*.
+
+[View the published article on ScienceDirect](https://www.sciencedirect.com/science/article/pii/S0260877426003651)
+
 ## License
 
 MIT License. See [LICENSE](LICENSE) for details.
