@@ -223,20 +223,6 @@ If you use **agentXtract** in your research, please cite:
 
 Zhou, X., Zhang, Y., Sablani, S. S., Wang, S., & Tang, J. (2027). Agentic AI for food property data: From literature to database to new discovery. *Journal of Food Engineering, 424*, 113327. https://doi.org/10.1016/j.jfoodeng.2026.113327
 
-### BibTeX
-
-```bibtex
-@article{zhou2027agentic,
-  title={Agentic AI for food property data: From literature to database to new discovery},
-  author={Zhou, Xu and Zhang, Yi and Sablani, Shyam S. and Wang, Shaojin and Tang, Juming},
-  journal={Journal of Food Engineering},
-  volume={424},
-  pages={113327},
-  year={2027},
-  doi={10.1016/j.jfoodeng.2026.113327}
-}
-```
-
 ## License
 
 MIT License. See [LICENSE](LICENSE) for details.
